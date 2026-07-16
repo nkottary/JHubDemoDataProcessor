@@ -10,3 +10,13 @@ Data Processor for JuliaHub project deployment demos. Reads instrument data from
 - Recommended to use instance type with at least 8GB memory.
 - Doesn't respond to requests so it doesn't matter what port number you mention in project deployment settings.
 - The DB service endpoint is hardcoded in src/DataProcessor.jl. Ideally this should be configured as an environment variable but that feature is not available right now. **Make sure to edit this for your deployment see [DB Service](https://github.com/nkottary/JHubDemoDBService) for more details**.
+
+#### Health check
+
+This service does not respond to HTTP requests. To check whether it is running correctly check the logs on JuliaHub.
+
+#### Other services in this demo
+
+- The database service: [JHubDemoDBService](https://github.com/nkottary/JHubDemoDBService)
+- An instrument simulator: [JHubDemoInstrumentSimulator](https://github.com/nkottary/JHubDemoInstrumentSimulator)
+- WebServer to display dashboard: [JHubDemoWebServer](https://github.com/nkottary/JHubDemoWebServer)
